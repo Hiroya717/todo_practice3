@@ -1,0 +1,69 @@
+TODOアプリ
+
+CRUD処理
+
+sql 4つの構文
+C : insert文
+R : select文
+U : update文
+D : delete文
+
+オブジェクト指向
+４つの要素
+- クラス(設計書)
+- メソッド(技)中
+- インスタンス(実物)外
+- プロパティ
+
+Model : データベースとのやりとりをするファイル
+
+Laravel :
+C : コントローラー
+M : モデル
+V : ビュー
+
+DBとPHPの作品(アプリ)の流れ
+-DBを作成(phpmyadmin)
+    - GUI(Graphical User Interface)
+    - その逆はCUI (Caracter User Interface)
+
+- DBとPHPの接続(db.conect.php)
+
+- SQL文の実行
+
+- DB接続を解除(なくても可)
+
+ファイルを読み込むメソッド
+
+クラスを引き継ぐ : 継承
+
+create機能を作成したい
+
+- creataボタンを作成するためにindex.phpを修正
+
+- create.phpにformを作成
+    フォームはデータを送信するもの
+    htmlタグ→form, a
+    データの送信方法 GET, POST
+    form →POST, GET
+    a → GET
+
+    GET送信 : urlにデータが入る&Urlに?がつく
+    POST送信 : 個人情報
+
+    formでのデータ送信方法
+    <form action="store.php" method="POST">
+        <input name="" type="">
+    </form>
+
+
+
+
+- データを送信する処理 create.php
+  データを受け取る処理(保存) store.php
+
+-index.phpに戻ってくる
+    - リダイレクト処理
+
+
+
