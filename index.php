@@ -1,9 +1,47 @@
 <?php
+// 接続
+require_once('Models/Task.php');
+require_once('function.php');
+
+
 // タスクの一覧表示機能
 // ファイルの読み込み
 
 
-// データの取得１
+// インスタンス化
+$tasks = new Task();
+$tasks = $tasks->getall();
+
+// デバック作業(debug)
+// データが入っているか
+//どういう型
+var_dump($tasks);
+
+
+$arr = ['id' => 1, 'text' => 'こんにちは'];
+// 配列
+var_dump($arr['text']);
+
+$arr2 = [
+    ['id' => 1, 'text' => 'こんにちは1'],
+    ['id' => 2, 'text' => 'こんにちは2'],
+    ['id' => 3, 'text' => 'こんにちは3']
+];
+// 連想配列
+var_dump($arr2[0]['text']);
+
+// データの取得
+
+// 配列をループして一行ずつ取得
+foreach($arr2 as $var) {
+    var_dump($var['text']);
+}
+
+
+
+
+
+// データの取得
 
 
 
@@ -53,13 +91,14 @@
         </div>
 
         <div class="row p-3">
+        <?php foreach($tasks as $task) : ?>
             <div class="col-sm-6 col-md-4 col-lg-3 py-3 py-3">
                 <div class="card">
                     <img src="https://picsum.photos/200" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">ここにタイトル</h5>
+                        <h5 class="card-title"><?php echo $task['title']?></h5>
                         <p class="card-text">
-                            ここに詳細
+                            <?php echo $task['contents']?>
                         </p>
                         <div class="text-right d-flex justify-content-end">
                             <!-- * href内を変更する -->
@@ -73,6 +112,7 @@
                     </div>
                 </div>
             </div>
+         <?php endforeach;?>
         </div>
     </div>
 

@@ -7,6 +7,9 @@ require_once('./Models/Task.php');
 // スーパーグローバル変数
 
 $title = $_POST['title'];
+var_dump($title);
+
+
 $contents = $_POST['contents'];
 $time = date("Y/m/d H:i:s");
 
