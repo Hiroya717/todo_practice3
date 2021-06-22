@@ -31,7 +31,7 @@ class Model
         // prepare
         // dbhのメソッド
         // PDOインスタンスのメソッド
-        $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table);
+        $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table . 'Where id = ?');
 
         // $dbh === PDOクラスのインスタンス
         // $dbh->prepare('SELECT * FROM ' . $this->table);
@@ -47,11 +47,19 @@ class Model
     }
 
     // * findById()を以下に追加する
+    function findById($id)
+    {
+        // $idと一致するidを持つデータを１件取得
+        $stmt = $this->db_manager->dbh->prepare('DELETE FROM' . $stmt->execute([$kid]));
+
+        $task 
+
+    }
 
 
-    
 
-    
+
+
     public function delete($data)
     {
         // 削除処理
