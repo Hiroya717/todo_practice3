@@ -102,10 +102,10 @@ foreach($arr2 as $var) {
                         </p>
                         <div class="text-right d-flex justify-content-end">
                             <!-- * href内を変更する -->
-                            <a href="edit.php?id=<? h($task['id'])?>" class="btn text-success">EDIT</a>
+                            <a href="edit.php" class="btn text-success">EDIT</a>
                             <form action="delete.php" method="post">
                                 <!-- * valueの中にtaskのidが入るようにする -->
-                                <input type="hidden" name="id" value="<?= h($task["id"]);?>">
+                                <input type="hidden" name="id" value="">
                                 <button type="submit" class="btn text-danger">DELETE</button>
                             </form>
                         </div>
