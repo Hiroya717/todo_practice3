@@ -22,7 +22,15 @@ class Task extends Model
         $stmt->execute($data);
     }
     // * update()を以下に追加する
-    
+    function update($data)
+    {
+        // SQL文を作成
+        $stmt = $this->db_manager->dbh->prepare(' UPDATE ' . $this->table . ' SET title = ? , contents = ? , where id = ? ')
+
+        // SQL文を実行
+         $stmt->execute($data);
+
+    }
 
 
 

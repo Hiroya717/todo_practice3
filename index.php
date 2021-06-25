@@ -15,7 +15,7 @@ $tasks = $tasks->getall();
 // デバック作業(debug)
 // データが入っているか
 //どういう型
-var_dump($tasks);
+// var_dump($tasks);
 
 
 $arr = ['id' => 1, 'text' => 'こんにちは'];
@@ -102,10 +102,11 @@ foreach($arr2 as $var) {
                         </p>
                         <div class="text-right d-flex justify-content-end">
                             <!-- * href内を変更する -->
-                            <a href="edit.php" class="btn text-success">EDIT</a>
+                            <a href="edit.php?id=<?= h($task['id']); ?>" class="btn
+                            text-success">EDIT</a>
                             <form action="delete.php" method="post">
                                 <!-- * valueの中にtaskのidが入るようにする -->
-                                <input type="hidden" name="id" value="">
+                                <input type="hidden" name="id" value="<?= h($task['id']);?>">
                                 <button type="submit" class="btn text-danger">DELETE</button>
                             </form>
                         </div>
